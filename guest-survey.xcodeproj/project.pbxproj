@@ -13,6 +13,7 @@
 		1037869119AE5B7C00144139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037869019AE5B7C00144139 /* Images.xcassets */; };
 		1037869D19AE5B7C00144139 /* guest_surveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037869C19AE5B7C00144139 /* guest_surveyTests.swift */; };
 		6620DE8719AFA12500976728 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620DE8619AFA12500976728 /* json.swift */; };
+		6620DE8B19AFC39D00976728 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620DE8A19AFC39D00976728 /* SurveyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1037869B19AE5B7C00144139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1037869C19AE5B7C00144139 /* guest_surveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guest_surveyTests.swift; sourceTree = "<group>"; };
 		6620DE8619AFA12500976728 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		6620DE8A19AFC39D00976728 /* SurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		1037868619AE5B7C00144139 /* guest-survey */ = {
 			isa = PBXGroup;
 			children = (
+				6620DE8919AFC38500976728 /* models */,
 				1037868919AE5B7C00144139 /* AppDelegate.swift */,
 				6620DE8819AFC23700976728 /* controllers */,
 				1037868D19AE5B7C00144139 /* Main.storyboard */,
@@ -118,6 +121,14 @@
 				1037868B19AE5B7C00144139 /* SurveyHomeController.swift */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		6620DE8919AFC38500976728 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6620DE8A19AFC39D00976728 /* SurveyModel.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				1037868C19AE5B7C00144139 /* SurveyHomeController.swift in Sources */,
 				1037868A19AE5B7C00144139 /* AppDelegate.swift in Sources */,
 				6620DE8719AFA12500976728 /* json.swift in Sources */,
+				6620DE8B19AFC39D00976728 /* SurveyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

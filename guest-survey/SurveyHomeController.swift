@@ -1,18 +1,14 @@
-//
-//  ViewController.swift
-//  guest-survey
-//
-//  Created by Daniel.Chahla on 8/27/14.
-//  Copyright (c) 2014 Daniel.Chahla. All rights reserved.
-//
-
 import UIKit
 
 class SurveyHomeController: UIViewController {
-                            
+    var model :SurveyModel = SurveyModel(JSON.parse("{\"title\":\"Survey TITLE\"}"))
+    
+    @IBOutlet weak var lblSurveyTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        lblSurveyTitle.text = model.title
     }
 
     override func didReceiveMemoryWarning() {

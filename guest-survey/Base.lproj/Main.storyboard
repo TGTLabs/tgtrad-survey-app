@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Survey Home Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SurveyHomeController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -81,6 +81,9 @@
                             <constraint firstItem="JYf-iK-vYw" firstAttribute="centerX" secondItem="vLL-Mw-Eg6" secondAttribute="centerX" id="zd7-5m-vnm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblSurveyTitle" destination="OGM-tc-JFa" id="pAa-J4-QdT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
