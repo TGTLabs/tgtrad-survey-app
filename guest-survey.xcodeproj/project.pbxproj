@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1037868A19AE5B7C00144139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037868919AE5B7C00144139 /* AppDelegate.swift */; };
-		1037868C19AE5B7C00144139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037868B19AE5B7C00144139 /* ViewController.swift */; };
+		1037868C19AE5B7C00144139 /* SurveyHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037868B19AE5B7C00144139 /* SurveyHomeController.swift */; };
 		1037868F19AE5B7C00144139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037868D19AE5B7C00144139 /* Main.storyboard */; };
 		1037869119AE5B7C00144139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037869019AE5B7C00144139 /* Images.xcassets */; };
 		1037869D19AE5B7C00144139 /* guest_surveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037869C19AE5B7C00144139 /* guest_surveyTests.swift */; };
@@ -29,7 +29,7 @@
 		1037868419AE5B7C00144139 /* guest-survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guest-survey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1037868819AE5B7C00144139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1037868919AE5B7C00144139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1037868B19AE5B7C00144139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1037868B19AE5B7C00144139 /* SurveyHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyHomeController.swift; sourceTree = "<group>"; };
 		1037868E19AE5B7C00144139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1037869019AE5B7C00144139 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1037869619AE5B7C00144139 /* guest-surveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "guest-surveyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1037868919AE5B7C00144139 /* AppDelegate.swift */,
-				1037868B19AE5B7C00144139 /* ViewController.swift */,
+				6620DE8819AFC23700976728 /* controllers */,
 				1037868D19AE5B7C00144139 /* Main.storyboard */,
 				1037869019AE5B7C00144139 /* Images.xcassets */,
 				1037868719AE5B7C00144139 /* Supporting Files */,
@@ -110,6 +110,14 @@
 				1037869B19AE5B7C00144139 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6620DE8819AFC23700976728 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1037868B19AE5B7C00144139 /* SurveyHomeController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1037868C19AE5B7C00144139 /* ViewController.swift in Sources */,
+				1037868C19AE5B7C00144139 /* SurveyHomeController.swift in Sources */,
 				1037868A19AE5B7C00144139 /* AppDelegate.swift in Sources */,
 				6620DE8719AFA12500976728 /* json.swift in Sources */,
 			);
