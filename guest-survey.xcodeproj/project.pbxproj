@@ -12,6 +12,7 @@
 		1037868F19AE5B7C00144139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037868D19AE5B7C00144139 /* Main.storyboard */; };
 		1037869119AE5B7C00144139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037869019AE5B7C00144139 /* Images.xcassets */; };
 		1037869D19AE5B7C00144139 /* guest_surveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037869C19AE5B7C00144139 /* guest_surveyTests.swift */; };
+		6620DE8519AF7FE000976728 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620DE8419AF7FE000976728 /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		1037869619AE5B7C00144139 /* guest-surveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "guest-surveyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1037869B19AE5B7C00144139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1037869C19AE5B7C00144139 /* guest_surveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guest_surveyTests.swift; sourceTree = "<group>"; };
+		6620DE8419AF7FE000976728 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = "../../swift-json/json.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		1037868719AE5B7C00144139 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6620DE8419AF7FE000976728 /* json.swift */,
 				1037868819AE5B7C00144139 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -210,6 +213,7 @@
 			files = (
 				1037868C19AE5B7C00144139 /* ViewController.swift in Sources */,
 				1037868A19AE5B7C00144139 /* AppDelegate.swift in Sources */,
+				6620DE8519AF7FE000976728 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +399,7 @@
 				103786A219AE5B7C00144139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		103786A319AE5B7C00144139 /* Build configuration list for PBXNativeTarget "guest-surveyTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +408,7 @@
 				103786A519AE5B7C00144139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
