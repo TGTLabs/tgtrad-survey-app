@@ -35,10 +35,10 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0wX-d3-Ek8" kind="showDetail" id="0YF-Yn-yeV"/>
+                                    <segue destination="qJS-s0-OVw" kind="showDetail" id="0YF-Yn-yeV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-tc-JFa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Survey title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-tc-JFa">
                                 <rect key="frame" x="257" y="76" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -88,10 +88,10 @@
                             <constraint firstItem="JYf-iK-vYw" firstAttribute="centerX" secondItem="vLL-Mw-Eg6" secondAttribute="centerX" id="zd7-5m-vnm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="J6j-0Z-KoA"/>
                     <connections>
                         <outlet property="lblSurveyTitle" destination="OGM-tc-JFa" id="pAa-J4-QdT"/>
                     </connections>
-                    <navigationItem key="navigationItem" id="J6j-0Z-KoA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cj6-Do-iTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dnl-6X-3IH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next question, please" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crF-7a-gsH">
@@ -130,10 +131,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="LcS-OF-mrU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-8Y-Waq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834.5" y="260.25"/>
+            <point key="canvasLocation" x="2966" y="261"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lz5-nU-wEJ">
@@ -152,6 +154,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70o-oc-63R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="261"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="utW-8Z-uiS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJS-s0-OVw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UCh-fM-5wL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0wX-d3-Ek8" kind="relationship" relationship="rootViewController" id="XMf-lc-1Vu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVO-5i-KjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154" y="261"/>
         </scene>
     </scenes>
     <resources>
