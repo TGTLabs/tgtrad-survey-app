@@ -2,7 +2,7 @@ import UIKit
 
 class SurveyHomeController: UIViewController {
 //    var model :SurveyModel = SurveyModel(JSON.parse("{\"title\":\"Survey TITLE\"}"))
-    var model :SurveysModel = SurveysModel(JSON.parse("{\"surveys:\"[{\"title\":\"Survey TITLE\"}, {\"title\":\"Survey TITLE2\"} ]}"))
+    //var model :SurveysModel = SurveysModel(JSON.parse("{\"surveys:\"[{\"title\":\"Survey TITLE\"}, {\"title\":\"Survey TITLE2\"} ]}"))
     
     @IBOutlet weak var lblSurveyTitle: UILabel!
     
@@ -10,7 +10,7 @@ class SurveyHomeController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //lblSurveyTitle.text = model.title
-        println(model)
+        //println(model)
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,7 +20,7 @@ class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableV
     
     let cellIdentifier = "cellIdentifier"
     //var tableData: [String] = ["One", "Two", "Three"]
-    var model :SurveysModel = SurveysModel(JSON.parse("{\"surveys\":[{\"title\":\"Survey TITLE\"}, {\"title\":\"Survey TITLE2\"} ]}"))
+    var model :SurveysModel = SurveysModel(JSON.parse("{\"surveys\":[{\"name\":\"alright\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd2fe6d58830000ffe2cd\",\"__v\":0},{\"name\":\"dudey\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd3542cda6d0000c6bebb\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd35f2cda6d0000c6bebd\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd39c161e6e00002a20c4\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd39c161e6e00002a20c6\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"owner\":\"z1231234611\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd39d161e6e00002a20c8\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd3c2161e6e00002a20ca\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd3dc4d90e90000961f69\",\"__v\":0},{\"name\":\"reallylongtitelmorethenthirtycharactersmethinks\",\"maxResponses\":100,\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"netWorth\":100,\"_id\":\"53fcd3dc4d90e90000961f6b\",\"__v\":0},{\"__v\":1,\"_id\":\"53fccfb8d3ad5a00009b1d52\",\"campaign\":\"worstEva\",\"costCenterId\":\"none\",\"maxResponses\":100,\"name\":\"colorsajkdkfalsdf468\",\"netWorth\":100,\"owner\":\"z1231234611\"},{\"__v\":1,\"_id\":\"53fccfccd3ad5a00009b1d54\",\"campaign\":\"worstEvasoomanycharacetsicankeeptypingforeverandkeepgoingandgoing\",\"costCenterId\":\"none\",\"maxResponses\":100,\"name\":\"rnadocalrisadfadisan_donnie\",\"netWorth\":100,\"owner\":\"z1231234611\",\"questions\":[]},{\"name\":\"my test name CREATED\",\"owner\":\"donnie\",\"maxResponses\":100,\"campaign\":\"some new campaign\",\"costCenterId\":\"123123\",\"netWorth\":1222,\"_id\":\"5400dc14a35e7548d53b8b6a\",\"__v\":0}]}"))
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,8 +53,8 @@ class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableV
         
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
         
-        cell.textLabel.text = self.model.surveys[indexPath.row].title
-        
+        cell.textLabel.text = self.model.surveys[indexPath.row].name
+        println(self.model.surveys[indexPath.row].name)
         return cell
         
     }
@@ -63,7 +63,9 @@ class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-        let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row) the owner is: \(self.model.surveys[indexPath.row].name), the maxResponses is: \(self.model.surveys[indexPath.row].maxResponses), the campaign is: \(self.model.surveys[indexPath.row].campaign), the costCenterId is:  \(self.model.surveys[indexPath.row].costCenterId), the netWorth is:  \(self.model.surveys[indexPath.row].netWorth)", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.Default,
