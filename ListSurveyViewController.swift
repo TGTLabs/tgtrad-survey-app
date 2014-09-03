@@ -26,6 +26,7 @@ class ListSurveyViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +81,11 @@ class ListSurveyViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         println("fuck this")
+        
+        var surveyHomeController: SurveyHomeController = segue.destinationViewController as SurveyHomeController
+        var rowNumber = tableView.indexPathForSelectedRow()?.row
+        var selectedSurvey = self.model.surveys[rowNumber!]
+        surveyHomeController.model = selectedSurvey
     }
     
     // animation
