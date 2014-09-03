@@ -46,15 +46,15 @@ class ListSurveyViewController: UIViewController, UITableViewDataSource, UITable
         return 1
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.surveys.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
         
-        cell.textLabel.text = self.model.surveys[indexPath.row].name
+        cell.textLabel?.text = self.model.surveys[indexPath.row].name
         println(self.model.surveys[indexPath.row].name)
         return cell
         
@@ -78,7 +78,7 @@ class ListSurveyViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         println("fuck this")
     }
     
