@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pye-g0-u8i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vae-Ro-6Sn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller Test-->
+        <!--List Survey View Controller-->
         <scene sceneID="TJQ-24-F1h">
             <objects>
-                <viewController id="Pye-g0-u8i" customClass="TableViewControllerTest" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListSurveyViewController" id="Pye-g0-u8i" customClass="ListSurveyViewController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tVw-Tz-9GX"/>
                         <viewControllerLayoutGuide type="bottom" id="QTQ-i7-RUf"/>
@@ -19,6 +19,18 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-E5-ZNv">
                                 <rect key="frame" x="0.0" y="70" width="319" height="352"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SurveyCell" id="5Rf-Ar-plM" userLabel="SurveyCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Rf-Ar-plM" id="Z44-ES-jRs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" identifier="ListSurveyDetail" id="Evm-Bz-GgG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Pye-g0-u8i" id="lq7-fR-Xcp"/>
                                     <outlet property="delegate" destination="Pye-g0-u8i" id="0GX-rm-281"/>
@@ -27,13 +39,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zwY-iy-kTc"/>
                     <connections>
                         <outlet property="tableView" destination="TbA-E5-ZNv" id="r9a-qi-E8i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clX-iW-JVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="-1042"/>
+            <point key="canvasLocation" x="994" y="-1266"/>
         </scene>
         <!--Survey Home Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -126,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162.5" y="261"/>
+            <point key="canvasLocation" x="1090" y="-579"/>
         </scene>
         <!--Survey Detail Controller-->
         <scene sceneID="G1h-6a-d81">
@@ -166,11 +179,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-8Y-Waq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="261"/>
+            <point key="canvasLocation" x="2894" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lz5-nU-wEJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70o-oc-63R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C1u-Id-l8n" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3MB-As-pyx">
@@ -182,9 +196,8 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jMh-4b-CkU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="70o-oc-63R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244.5" y="261"/>
+            <point key="canvasLocation" x="172" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="utW-8Z-uiS">
@@ -202,10 +215,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVO-5i-KjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="261"/>
+            <point key="canvasLocation" x="2082" y="-579"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qOl-F1-DlP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vae-Ro-6Sn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TcN-jh-Rn2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pye-g0-u8i" kind="relationship" relationship="rootViewController" id="kEn-18-bnO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOE-id-9ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-1266"/>
         </scene>
     </scenes>
     <resources>
         <image name="hero-image" width="403" height="337"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Evm-Bz-GgG"/>
+    </inferredMetricsTieBreakers>
 </document>

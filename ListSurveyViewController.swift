@@ -16,9 +16,9 @@
 
 import UIKit
 
-class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ListSurveyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let cellIdentifier = "cellIdentifier"
+    let cellIdentifier = "SurveyCell"
     //var tableData: [String] = ["One", "Two", "Three"]
     var model :SurveysModel = SurveysModel(JSON.parse("{\"surveys\":[{\"name\":\"Survey Number 1\",\"owner\":\"Daniel Chahla\",\"maxResponses\":200,\"campaign\":\"Test Survey\",\"costCenterId\":\"none\",\"netWorth\":100,\"logoUrl\":\"luke.com\",\"status\":\"open\",\"_id\":\"5405e4324b6a27375d7420fa\",\"questions\":[{\"text\":\"Best Color?\",\"_id\":\"5405e4324b6a27375d7420fc\",\"answers\":[\"blue\",\"red\"]},{\"text\":\"Favorite Bird?\",\"_id\":\"5405e4324b6a27375d7420fb\",\"answers\":[\"African Swallow\",\"European Swallow\"]}],\"__v\":0},{\"name\":\"Survey Number 2\",\"owner\":\"Sir Daniel Chahla\",\"maxResponses\":200,\"campaign\":\"Test Survey 2\",\"costCenterId\":\"none\",\"netWorth\":300,\"logoUrl\":\"deluxe.com\",\"status\":\"open\",\"_id\":\"5405e49b606bb3415df31e17\",\"questions\":[{\"text\":\"Greatest NFL Team?\",\"_id\":\"5405e49b606bb3415df31e19\",\"answers\":[\"Vikings\",\"Packers\"]},{\"text\":\"Ambiturner?\",\"_id\":\"5405e49b606bb3415df31e18\",\"answers\":[\"Yes\",\"No\"]}],\"__v\":0}]}"))
     
@@ -40,6 +40,7 @@ class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableV
     }
     
     // UITableViewDataSource methods
+    
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1
@@ -73,8 +74,20 @@ class TableViewControllerTest: UIViewController, UITableViewDataSource, UITableV
                 (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
         }))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.performSegueWithIdentifier("ListSurveyDetail", sender: "stuff")
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        println("fuck this")
+    }
+    
+    // animation
+    func tableView(tableView: UITableView!, willDisplayCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animateWithDuration(0.45, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
     }
     
     
