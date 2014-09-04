@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" identifier="ListSurveyDetail" id="Evm-Bz-GgG"/>
+                                            <segue destination="vXZ-lx-hvc" kind="show" identifier="ListDetailSurvey" id="qfr-YT-UGy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clX-iW-JVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-1266"/>
+            <point key="canvasLocation" x="312" y="-2554"/>
         </scene>
         <!--Survey Home Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -79,7 +79,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="qJS-s0-OVw" kind="showDetail" id="0YF-Yn-yeV"/>
+                                    <segue destination="KeN-HY-0mv" kind="show" id="uXf-yo-X5R"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="This is the survey description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-Mw-Eg6">
@@ -139,65 +139,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="-579.5"/>
+            <point key="canvasLocation" x="1168" y="-2518"/>
         </scene>
         <!--Survey Detail Controller-->
-        <scene sceneID="G1h-6a-d81">
+        <scene sceneID="Y9h-kc-FvT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-8Y-Waq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SurveyDetailController" id="0wX-d3-Ek8" customClass="SurveyDetailController" sceneMemberID="viewController">
+                <viewController id="KeN-HY-0mv" customClass="SurveyDetailController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="M2E-tW-moL"/>
-                        <viewControllerLayoutGuide type="bottom" id="cj6-Do-iTl"/>
+                        <viewControllerLayoutGuide type="top" id="Fjp-MY-eeO"/>
+                        <viewControllerLayoutGuide type="bottom" id="AXp-EN-qa0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dnl-6X-3IH">
+                    <view key="view" contentMode="scaleToFill" id="KfD-19-WiW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next question, please" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crF-7a-gsH">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-Yo-LC1">
+                                <rect key="frame" x="-116" y="257" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="269" width="167" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="crF-7a-gsH"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="crF-7a-gsH"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="LcS-OF-mrU"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2894" y="-579"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="utW-8Z-uiS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJS-s0-OVw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UCh-fM-5wL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0wX-d3-Ek8" kind="relationship" relationship="rootViewController" id="XMf-lc-1Vu"/>
+                        <outlet property="currentQuestionTitle" destination="r6K-Yo-LC1" id="OCZ-rl-BSA"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NVO-5i-KjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="On7-dW-GYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2082" y="-579"/>
+            <point key="canvasLocation" x="1920" y="-2070"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qOl-F1-DlP">
@@ -215,7 +186,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOE-id-9ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-1266"/>
+            <point key="canvasLocation" x="-410" y="-2554"/>
         </scene>
     </scenes>
     <resources>
