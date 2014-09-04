@@ -12,6 +12,7 @@
 		1037868F19AE5B7C00144139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037868D19AE5B7C00144139 /* Main.storyboard */; };
 		1037869119AE5B7C00144139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037869019AE5B7C00144139 /* Images.xcassets */; };
 		1037869D19AE5B7C00144139 /* guest_surveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037869C19AE5B7C00144139 /* guest_surveyTests.swift */; };
+		10D2540019B8E48B000252A4 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D253FF19B8E48B000252A4 /* QuestionModel.swift */; };
 		6620DE8719AFA12500976728 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620DE8619AFA12500976728 /* json.swift */; };
 		6620DE8B19AFC39D00976728 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620DE8A19AFC39D00976728 /* SurveyModel.swift */; };
 		D15AC51019B0C1360049336F /* SurveyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15AC50F19B0C1360049336F /* SurveyDetailController.swift */; };
@@ -39,6 +40,7 @@
 		1037869619AE5B7C00144139 /* guest-surveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "guest-surveyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1037869B19AE5B7C00144139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1037869C19AE5B7C00144139 /* guest_surveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guest_surveyTests.swift; sourceTree = "<group>"; };
+		10D253FF19B8E48B000252A4 /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		6620DE8619AFA12500976728 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		6620DE8A19AFC39D00976728 /* SurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
 		D15AC50F19B0C1360049336F /* SurveyDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				6620DE8A19AFC39D00976728 /* SurveyModel.swift */,
+				10D253FF19B8E48B000252A4 /* QuestionModel.swift */,
 				D15AC51D19B0E2500049336F /* SurveysModel.swift */,
 			);
 			name = models;
@@ -246,6 +249,7 @@
 				6620DE8719AFA12500976728 /* json.swift in Sources */,
 				6620DE8B19AFC39D00976728 /* SurveyModel.swift in Sources */,
 				D15AC51C19B0DD0B0049336F /* ListSurveyViewController.swift in Sources */,
+				10D2540019B8E48B000252A4 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,14 @@ import UIKit
 class SurveyModel: JSON {
     override init(_ json:JSON)  {
         super.init(json)
+        
+        for (i, v) in self["questions"]{
+            questions.append(QuestionModel(v))
+        }
+
     }
+    var questions:[QuestionModel] = [QuestionModel]()
+    
     var name:String {
         return self["name"].asString!
     }

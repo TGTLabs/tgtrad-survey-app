@@ -82,16 +82,7 @@
                                     <segue destination="qJS-s0-OVw" kind="showDetail" id="0YF-Yn-yeV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Survey title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-tc-JFa">
-                                <rect key="frame" x="257" y="76" width="86" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="157" y="76" width="86" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="This is the survey description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-Mw-Eg6">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="This is the survey description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-Mw-Eg6">
                                 <rect key="frame" x="189" y="475" width="224" height="21"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -115,6 +106,15 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Survey title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-tc-JFa">
+                                <rect key="frame" x="18" y="73" width="566" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="157" y="76" width="86" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -139,11 +139,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="-579"/>
+            <point key="canvasLocation" x="1090" y="-579.5"/>
         </scene>
         <!--Survey Detail Controller-->
         <scene sceneID="G1h-6a-d81">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-8Y-Waq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SurveyDetailController" id="0wX-d3-Ek8" customClass="SurveyDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2E-tW-moL"/>
@@ -177,27 +178,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="LcS-OF-mrU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-8Y-Waq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2894" y="-579"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Lz5-nU-wEJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C1u-Id-l8n" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3MB-As-pyx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jMh-4b-CkU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="70o-oc-63R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="172" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="utW-8Z-uiS">
@@ -239,7 +221,4 @@
     <resources>
         <image name="hero-image" width="403" height="337"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Evm-Bz-GgG"/>
-    </inferredMetricsTieBreakers>
 </document>
