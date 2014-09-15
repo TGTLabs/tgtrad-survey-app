@@ -11,6 +11,9 @@ import Foundation
 class QuestionModel: JSON {
     override init(_ json:JSON)  {
         super.init(json)
+        for (i, v) in self["answers"]{
+            answers.append(AnswerModel(v))
+        }
         println(json)
     }
     
@@ -26,6 +29,6 @@ class QuestionModel: JSON {
     var url:String? {
         return self["url"].asString
     }
-    
+    var answers:[AnswerModel] = [AnswerModel]()
 
 }

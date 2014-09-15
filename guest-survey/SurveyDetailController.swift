@@ -24,11 +24,13 @@ class SurveyDetailController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //println(model)
         currentQuestionTitle.text = model?.questions[questionIndex!].title
-//        answer1.text = model?.questions[questionIndex!].answers[0]
-//        answer2.text = model?.questions[questionIndex!].answers[1]
+        println(model)
+        answer1.text = model?.questions[questionIndex!].answers[0].text
+        answer2.text = model?.questions[questionIndex!].answers[1].text
+        
 
         
-        println(model?.questions[questionIndex!].title)
+        println(model?.questions[questionIndex!])
         
         
         
