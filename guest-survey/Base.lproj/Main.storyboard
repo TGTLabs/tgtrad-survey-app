@@ -79,7 +79,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="KeN-HY-0mv" kind="show" id="uXf-yo-X5R"/>
+                                    <segue destination="KeN-HY-0mv" kind="show" identifier="FirstQuestionSegue" id="uXf-yo-X5R"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="This is the survey description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-Mw-Eg6">
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="-2518"/>
+            <point key="canvasLocation" x="1000" y="-2554"/>
         </scene>
         <!--Survey Detail Controller-->
         <scene sceneID="Y9h-kc-FvT">
@@ -154,21 +154,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-Yo-LC1">
-                                <rect key="frame" x="-116" y="257" width="568" height="21"/>
+                                <rect key="frame" x="-125" y="108" width="568" height="75"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mec-2D-KC9">
+                                <rect key="frame" x="26" y="255" width="194" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR3-7r-cIB">
+                                <rect key="frame" x="202" y="255" width="130" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4v-cV-ndu">
+                                <rect key="frame" x="91" y="498" width="111" height="30"/>
+                                <state key="normal" title="SubmitQuestion">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KeN-HY-0mv" kind="show" identifier="NextQuestionSegue" id="h7i-2q-FZC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="answer1" destination="mec-2D-KC9" id="iA0-0s-bWi"/>
+                        <outlet property="answer2" destination="iR3-7r-cIB" id="8BK-23-6oR"/>
                         <outlet property="currentQuestionTitle" destination="r6K-Yo-LC1" id="OCZ-rl-BSA"/>
+                        <outlet property="submitQuestion" destination="K4v-cV-ndu" id="w7G-oE-qab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="On7-dW-GYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="-2070"/>
+            <point key="canvasLocation" x="1692" y="-2554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qOl-F1-DlP">
@@ -192,4 +216,7 @@
     <resources>
         <image name="hero-image" width="403" height="337"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uXf-yo-X5R"/>
+    </inferredMetricsTieBreakers>
 </document>

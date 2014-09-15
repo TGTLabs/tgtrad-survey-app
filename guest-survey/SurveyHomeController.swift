@@ -2,16 +2,14 @@ import UIKit
 
 class SurveyHomeController: UIViewController {
     
-var model :SurveyModel?
-
+    var model :SurveyModel?
+    var questionIndex: NSNumber?
     
     @IBOutlet weak var lblSurveyTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //println(model)
-        
         lblSurveyTitle.text = self.model?.name
         
     }
@@ -22,14 +20,18 @@ var model :SurveyModel?
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        println("fuck this too")
+        
+        if (segue.identifier == "FirstQuestionSegue"){
+        println("beginning segue to SurveyDetailController")
         
         var surveyDetailController: SurveyDetailController = segue.destinationViewController as SurveyDetailController
         //var rowNumber = tableView.indexPathForSelectedRow()?.row
-        var selectedQuestion = self.model?.questions[0]
-        println(selectedQuestion)
-        surveyDetailController.model = selectedQuestion
+//        var selectedQuestion = self.model?.questions[0]
+//        println(selectedQuestion)
+        surveyDetailController.model = model?
+        surveyDetailController.questionIndex = 0
     }
+}
 
 }
 

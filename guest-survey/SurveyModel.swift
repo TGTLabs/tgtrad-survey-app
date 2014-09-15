@@ -32,5 +32,11 @@ class SurveyModel: JSON {
     var _id:String {
         return self["_id"].asString!
     }
+    var totalQuestions:NSNumber? {
+        return self["totalQuestions"].asNumber
+    }
+    var currentQuestion:NSNumber? {
+        return self["currentQuestion"].asNumber
+    }
     
 }
