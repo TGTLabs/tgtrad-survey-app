@@ -11,7 +11,6 @@ import Foundation
 class AnswerModel: JSON {
     override init(_ json:JSON)  {
         super.init(json)
-        println(json)
     }
     
     var text:String? {

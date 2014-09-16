@@ -79,7 +79,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="KeN-HY-0mv" kind="show" identifier="FirstQuestionSegue" id="uXf-yo-X5R"/>
+                                    <action selector="clickButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CDi-aq-suC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="This is the survey description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-Mw-Eg6">
@@ -134,17 +134,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="J6j-0Z-KoA"/>
                     <connections>
+                        <outlet property="getStartedButton" destination="JYf-iK-vYw" id="2wB-RJ-Rxa"/>
                         <outlet property="lblSurveyTitle" destination="OGM-tc-JFa" id="pAa-J4-QdT"/>
+                        <segue destination="KeN-HY-0mv" kind="show" identifier="FirstQuestionTextSegue" id="td5-a2-cY0"/>
+                        <segue destination="HxF-dx-S8r" kind="show" identifier="FirstQuestionImageSegue" id="7Qb-ii-1qP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000" y="-2554"/>
         </scene>
-        <!--Survey Detail Controller-->
+        <!--Survey Question Text Controller-->
         <scene sceneID="Y9h-kc-FvT">
             <objects>
-                <viewController id="KeN-HY-0mv" customClass="SurveyDetailController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KeN-HY-0mv" customClass="SurveyQuestionTextController" customModule="guest_survey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fjp-MY-eeO"/>
                         <viewControllerLayoutGuide type="bottom" id="AXp-EN-qa0"/>
@@ -177,22 +180,112 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KeN-HY-0mv" kind="show" identifier="NextQuestionSegue" id="h7i-2q-FZC"/>
+                                    <action selector="submitQuestion:" destination="KeN-HY-0mv" eventType="touchUpInside" id="uVD-lU-kzZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aC-BG-QJb">
+                                <rect key="frame" x="507" y="302" width="62" height="30"/>
+                                <state key="normal" title="Phantom">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KeN-HY-0mv" kind="show" identifier="TextToTextSegue" id="bKP-Fw-XGO"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PO2-yF-Ftm">
+                                <rect key="frame" x="32" y="72" width="229" height="2"/>
+                            </progressView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Kaz-uH-ZFi">
+                                <rect key="frame" x="32" y="350" width="229" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rRN-IZ-3wg"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Answer1"/>
+                                    <segment title="Answer2"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select an answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7K-LQ-ADO">
+                                <rect key="frame" x="32" y="469" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kiw-YC-V4E"/>
                     <connections>
                         <outlet property="answer1" destination="mec-2D-KC9" id="iA0-0s-bWi"/>
                         <outlet property="answer2" destination="iR3-7r-cIB" id="8BK-23-6oR"/>
+                        <outlet property="answerSegment" destination="Kaz-uH-ZFi" id="6k7-vp-4gw"/>
                         <outlet property="currentQuestionTitle" destination="r6K-Yo-LC1" id="OCZ-rl-BSA"/>
+                        <outlet property="errorText" destination="F7K-LQ-ADO" id="pTX-HR-dDV"/>
+                        <outlet property="progressBar" destination="PO2-yF-Ftm" id="a83-Wq-TvS"/>
                         <outlet property="submitQuestion" destination="K4v-cV-ndu" id="w7G-oE-qab"/>
+                        <segue destination="HAM-bz-BGa" kind="show" identifier="TextToFinishSegue" id="q2X-Qk-5ta"/>
+                        <segue destination="HxF-dx-S8r" kind="show" identifier="TextToImageSegue" id="lgH-td-zdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="On7-dW-GYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-2554"/>
+            <point key="canvasLocation" x="1712" y="-3114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dwZ-bN-ozx">
+            <objects>
+                <viewController id="HxF-dx-S8r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s5s-Rv-erY"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEA-jZ-bpL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eEh-Y1-c2b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-AC-Who">
+                                <rect key="frame" x="106" y="103" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JSv-MZ-L8r"/>
+                    <connections>
+                        <segue destination="HAM-bz-BGa" kind="show" identifier="ImageToFinishSegue" id="x1c-Yl-ieT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xM-sO-BLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="-2305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uik-4H-XIa">
+            <objects>
+                <viewController id="HAM-bz-BGa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2JV-CA-kzL"/>
+                        <viewControllerLayoutGuide type="bottom" id="PTh-tl-gDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jMZ-Zp-bbh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you for taking the survey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duk-bd-j1b">
+                                <rect key="frame" x="31" y="210" width="241" height="149"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh1-Xa-yBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432" y="-2687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qOl-F1-DlP">
@@ -210,13 +303,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOE-id-9ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="-2554"/>
+            <point key="canvasLocation" x="-382" y="-2546"/>
         </scene>
     </scenes>
     <resources>
         <image name="hero-image" width="403" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uXf-yo-X5R"/>
+        <segue reference="td5-a2-cY0"/>
+        <segue reference="lgH-td-zdy"/>
+        <segue reference="q2X-Qk-5ta"/>
     </inferredMetricsTieBreakers>
 </document>

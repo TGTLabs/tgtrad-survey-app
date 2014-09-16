@@ -14,7 +14,6 @@ class QuestionModel: JSON {
         for (i, v) in self["answers"]{
             answers.append(AnswerModel(v))
         }
-        println(json)
     }
     
     var title:String? {

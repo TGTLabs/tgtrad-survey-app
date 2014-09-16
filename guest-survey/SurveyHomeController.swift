@@ -7,6 +7,17 @@ class SurveyHomeController: UIViewController {
     
     @IBOutlet weak var lblSurveyTitle: UILabel!
     
+    @IBAction func clickButton(sender: AnyObject) {
+        println(self.model?.questions[0]._type)
+        if(self.model?.questions[0]._type == "text"){
+        self.performSegueWithIdentifier("FirstQuestionTextSegue", sender: self)
+        }
+        if(self.model?.questions[0]._type == "image"){
+            self.performSegueWithIdentifier("FirstQuestionImageSegue", sender: self)
+
+        }
+    }
+    @IBOutlet weak var getStartedButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,16 +32,20 @@ class SurveyHomeController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if (segue.identifier == "FirstQuestionSegue"){
+        if (segue.identifier == "FirstQuestionTextSegue"){
         println("beginning segue to SurveyDetailController")
         
-        var surveyDetailController: SurveyDetailController = segue.destinationViewController as SurveyDetailController
-        //var rowNumber = tableView.indexPathForSelectedRow()?.row
-//        var selectedQuestion = self.model?.questions[0]
-//        println(selectedQuestion)
-        surveyDetailController.model = model?
-        surveyDetailController.questionIndex = 0
+        var surveyQuestionTextController: SurveyQuestionTextController = segue.destinationViewController as SurveyQuestionTextController
+        surveyQuestionTextController.model = model?
+        surveyQuestionTextController.questionIndex = 0
+        surveyQuestionTextController.questionTotal = model?.questions.count
     }
+//        if (segue.identifier == "FirstQuestionImageSegue"){
+//            var surveyQuestionImageController: SurveyQuestionImageController = segue.destinationViewController as SurveyQuestionImageController
+//            surveyQuestionImageController.model = model?
+//            surveyQuestionImageController.questionIndex = 0
+//            surveyQuestionImageController.questionTotal = model?.questions.count
+//        }
 }
 
 }
